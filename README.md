@@ -94,8 +94,7 @@ lazy 서스팬스 임포트해줌
 App()함수블럭안 리턴블럭:
 로딩중에 볼 컴포넌트를 서스펜스로 감싸줌
 
----
- 
+    
 --kakaoMap.Button 컴포
 --Suspens lazy 느린로딩으로 교체
 ---
@@ -105,8 +104,7 @@ App()함수블럭안 리턴블럭:
     
 ProductCard 전체목록의 상품 칸 하나하나
 
-    
-    
+        
 &&연산자: true일때만 보인다
 
     
@@ -203,4 +201,4 @@ export default function ProductCard({ product = {} }) {
 * product || {}
 → 혹시라도 null이 들어오는 경우에도
 undefined 대신 안전하게 {}로 처리.    
----   
+
