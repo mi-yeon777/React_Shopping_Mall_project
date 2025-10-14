@@ -133,7 +133,6 @@ day2_3
     
 ProductCard.jsx
 
-    
 ```
     export default function ProductCard({ product }) {
   const {
