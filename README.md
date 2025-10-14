@@ -88,7 +88,7 @@ index.index에
 
  컴포넌트 파일의 kakaoMap.jsx의 코드에 문제있던것
 
----
+
 App.jsx
 Lazy: 로딩 늦춰짐
 lazy 서스팬스 임포트해줌
@@ -97,10 +97,10 @@ App()함수블럭안 리턴블럭:
 로딩중에 볼 컴포넌트를 서스펜스로 감싸줌
 
     
---kakaoMap.Button 컴포
---Suspens lazy 느린로딩으로 교체
+kakaoMap.Button 컴포
+Suspens lazy 느린로딩으로 교체
     
----
+
 
 -ProductList.jsx, ProductCard.jsx
 
@@ -111,7 +111,7 @@ ProductCard 전체목록의 상품 칸 하나하나
 &&연산자: true일때만 보인다
 
     
----
+
 day2_3
 
     
