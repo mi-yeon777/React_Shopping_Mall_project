@@ -1,16 +1,53 @@
-# React + Vite
+# bay1 10.13
+강사님 제공 컴포넌트의
+셈플페이지에 html제공해줌 참고해서 작업하기
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+카카오 맵 스크립트 앱키 발급받아 출력시켜봄 조회는 되나 index.html에서 넣은
+```
+    <script src="https://dapi.kakao.com/v2/maps/sdk.js?앱키삽입구간&libraries=services"></script>
+```
+는 임시용 스크립트 때문에 완전한 상태 아님
 
-Currently, two official plugins are available:
+---
+우먼, 맨등 컴포넌트 부분으로 뺄거 구분해보기(10.14완료)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+---
+라우터는 버전 7버전 형식으로 사용
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+마이 프로젝트 몰(내 작업용)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+-테일윈드 설치없이 코드로 셋팅
+
+
+vite.config.js파일에 강사님 코드 복붙
+
+
+인덱스,css 복붙
+
+
+"@/절대경로 설정" , .은 상대경로
+
+
+브라우저에/샘플스토어, 등 경로 들어가 확인조회
+
+
+경로지정 App.jsx 컴포넌트:
+
+
+글로벌레이아웃을 넣을때
+
+
+칠드런[]안에 path 넣는다. 자식들은 /쓰지않는다.
+
+---스텝2
+셈플프로덕트 html을
+프로덕트로 바꿔 붙여넣음
+
+개발자모드에서 화살표나? 요소 코드에 커서를 올리면 해당영역 표시됨
+
+
+프로덕트 카드는 중첩할 필요가 없어 컴포넌트에 넣고 백업용으로만 남겨놓음
+새로 프로덕트카드jsx 생성
