@@ -1,7 +1,5 @@
-#여긴 원본 파일 저장용(나머지글 추려서 내작업 repository에 올릴것)
+
 # bay1 10.13 
-강사님 제공 컴포넌트의
-셈플페이지에 html제공해줌 참고해서 작업하기
 
 카카오 맵 스크립트 앱키 발급받아 출력시켜봄 조회는 되나 index.html에서 넣은
 ```
@@ -10,8 +8,28 @@
 는 임시용 스크립트 때문에 완전한 상태 아님
 
 ---
-우먼, 맨등 컴포넌트 부분으로 뺄거 구분해보기(10.14완료)
+구현할것:
 
+
+스케쳐스코리아 사이트 참고
+
+
+상세보기, 선택, 지도 검색
+
+
+1.상품목록을 다르게
+(제목, 가격 리뷰)
+
+
+2. 상세뷰에서 해당 데이터
+
+
+3.장바구니 클릭시 해당 정보를 보내는것
+
+
+제공받은 컴포넌트의
+셈플페이지 html 참고해서 작업하기
+우먼, 맨등 컴포넌트 부분으로 뺄거 구분해보기(카테고리와 필터로 10.14완료)
 
 ---
 라우터는 버전 7버전 형식으로 사용
@@ -56,7 +74,134 @@ vite.config.js파일에 강사님 코드 복붙
 새로 프로덕트카드jsx 생성
 
 # DAY2 (10.14)
-에러없는 카카오맵 출력 완성
+*에러없는 카카오맵 출력 완성
 
 
 KakaoMap컴포넌트 수정작업
+
+
+index.index에
+<script>태그는 일시적으로 넣어준것인데
+없어도 정상 출력이 잘되야 정상이다.
+
+ 컴포넌트 파일의 kakaoMap.jsx의 코드에 문제있던것
+
+---
+App.jsx
+Lazy: 로딩 늦춰짐
+lazy 서스팬스 임포트해줌
+
+App()함수블럭안 리턴블럭:
+로딩중에 볼 컴포넌트를 서스펜스로 감싸줌
+
+---
+ 
+--kakaoMap.Button 컴포
+--Suspens lazy 느린로딩으로 교체
+---
+
+-ProductList.jsx, ProductCard.jsx
+
+    
+ProductCard 전체목록의 상품 칸 하나하나
+
+    
+    
+&&연산자: true일때만 보인다
+
+    
+---
+day2_3
+
+    
+컴포넌트의
+스크롤탑jsx: 스크롤고정
+글로벌 레이아웃jsx에도 스크롤탑 설정해놓은 상태
+
+페이지스의
+프로덕트 카드
+프로덕트리스트jsx
+카테고리, 필터로 women, Men등 분류해주자
+
+    
+## day2_2, day2_3취합 오류해결
+
+
+* day2_2:
+
+홈화면이 조회안됨(App.jsx의 path경로들을 직접화면 url에 입력시에만 일부조회)
+    
+ProductCard.jsx
+
+    
+```
+    export default function ProductCard({ product }) {
+  const {
+    id,
+    title,
+    price,
+    reviewScore,
+    reviewCount,
+    isNew = false,
+    isBest = false,
+    isSoldout = false,
+  } = product;
+```
+
+    
+{ product }는 부모 컴포넌트가 내려준 props(속성) 을 구조 분해해서 받는 부분.에
+카테고리 누락(리턴블럭에도 <div>[{category}]</div>누락)
+
+
+* day2_3: 홈화면에 제품 정보(가격,제품명, 별점등) 안뜸 
+
+    
+ㄴ> Home.jsx에 ProductList.jsx 정보 넣어 보이도록 수정
+
+---
+
+    
+ProductCard.jsx 수정전
+
+    
+```
+export default function ProductCard({ product = {} }) {
+  const {
+    id,
+    title,
+    price,
+    category,
+    reviewScore,
+    reviewCount,
+    isNew = false,
+    isBest = false,
+    isSoldout = false,
+  } = product || {};
+}
+```
+
+수정후
+```
+export default function ProductCard({ product = {} }) {
+  const {
+    id,
+    title,
+    price,
+    category,
+    reviewScore,
+    reviewCount,
+    isNew = false,
+    isBest = false,
+    isSoldout = false,
+  } = product || {};
+}
+```
+* product = {}
+→ 만약 상위 컴포넌트에서 product를 전달하지 않아도
+기본값으로 빈 객체 {}를 받음.
+⇒ 구조분해가 에러 없이 동작함.
+
+* product || {}
+→ 혹시라도 null이 들어오는 경우에도
+undefined 대신 안전하게 {}로 처리.    
+---   
