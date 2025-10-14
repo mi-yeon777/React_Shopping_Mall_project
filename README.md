@@ -86,18 +86,28 @@ index.index에
 <script>태그는 일시적으로 넣어준것인데
 없어도 정상 출력이 잘되야 정상이다.
 
- 컴포넌트 파일의 kakaoMap.jsx의 코드에 문제있던것
+    
+컴포넌트 파일의 kakaoMap.jsx의 코드에 문제있던것
 
 
 App.jsx
+
+    
 Lazy: 로딩 늦춰짐
+
+    
 lazy 서스팬스 임포트해줌
+    
 
 App()함수블럭안 리턴블럭:
+
+
 로딩중에 볼 컴포넌트를 서스펜스로 감싸줌
 
     
 kakaoMap.Button 컴포
+
+    
 Suspens lazy 느린로딩으로 교체
     
 
@@ -111,17 +121,24 @@ ProductCard 전체목록의 상품 칸 하나하나
 &&연산자: true일때만 보인다
 
     
-
 day2_3
 
     
 컴포넌트의
 스크롤탑jsx: 스크롤고정
+
+    
 글로벌 레이아웃jsx에도 스크롤탑 설정해놓은 상태
 
 페이지스의
+
+    
 프로덕트 카드
+
+    
 프로덕트리스트jsx
+
+    
 카테고리, 필터로 women, Men등 분류해주자
 
     
@@ -130,10 +147,13 @@ day2_3
 
 * day2_2:
 
+    
 홈화면이 조회안됨(App.jsx의 path경로들을 직접화면 url에 입력시에만 일부조회)
+
     
 ProductCard.jsx
 
+    
 ```
     export default function ProductCard({ product }) {
   const {
@@ -184,6 +204,8 @@ export default function ProductCard({ product = {} }) {
 ```
 
 수정후
+
+    
 ```
 
 export default function ProductCard({ product = {} }) {
@@ -205,9 +227,13 @@ export default function ProductCard({ product = {} }) {
 * product = {}
 → 만약 상위 컴포넌트에서 product를 전달하지 않아도
 기본값으로 빈 객체 {}를 받음.
+
+    
 ⇒ 구조분해가 에러 없이 동작함.
 
 * product || {}
+
+    
 → 혹시라도 null이 들어오는 경우에도
 undefined 대신 안전하게 {}로 처리.    
 
