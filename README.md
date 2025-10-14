@@ -77,10 +77,8 @@ vite.config.js파일에 강사님 코드 복붙
 
 # day2
 
-## day2_2, day2_3취합 오류해결
 
-
-day2(지도 오류 해결완료)
+* day2(지도 오류 해결완료):
 
 
 index.index에
@@ -92,6 +90,9 @@ index.index에
     
 컴포넌트 파일의 kakaoMap.jsx의 코드에 문제있던것
 
+
+
+## day2_2, day2_3취합 오류해결
 
 * day2_2:
 
