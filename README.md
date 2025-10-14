@@ -61,7 +61,7 @@ vite.config.js파일에 강사님 코드 복붙
 
 칠드런[]안에 path 넣는다. 자식들은 /쓰지않는다.
 
----스텝2
+스텝2
 
 
 셈플프로덕트 html을
@@ -198,6 +198,7 @@ export default function ProductCard({ product = {} }) {
 }
 
 ```
+    
 * product = {}
 → 만약 상위 컴포넌트에서 product를 전달하지 않아도
 기본값으로 빈 객체 {}를 받음.
