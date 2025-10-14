@@ -75,73 +75,7 @@ vite.config.js파일에 강사님 코드 복붙
 프로덕트 카드는 중첩할 필요가 없어 컴포넌트에 넣고 백업용으로만 남겨놓음
 새로 프로덕트카드jsx 생성
 
-# DAY2 (10.14)
-*에러없는 카카오맵 출력 완성
 
-
-KakaoMap컴포넌트 수정작업
-
-
-index.index에
-<script>태그는 일시적으로 넣어준것인데
-없어도 정상 출력이 잘되야 정상이다.
-
-    
-컴포넌트 파일의 kakaoMap.jsx의 코드에 문제있던것
-
-
-App.jsx
-
-    
-Lazy: 로딩 늦춰짐
-
-    
-lazy 서스팬스 임포트해줌
-    
-
-App()함수블럭안 리턴블럭:
-
-
-로딩중에 볼 컴포넌트를 서스펜스로 감싸줌
-
-    
-kakaoMap.Button 컴포
-
-    
-Suspens lazy 느린로딩으로 교체
-    
-
-
--ProductList.jsx, ProductCard.jsx
-
-    
-ProductCard 전체목록의 상품 칸 하나하나
-
-        
-&&연산자: true일때만 보인다
-
-    
-day2_3
-
-    
-컴포넌트의
-스크롤탑jsx: 스크롤고정
-
-    
-글로벌 레이아웃jsx에도 스크롤탑 설정해놓은 상태
-
-페이지스의
-
-    
-프로덕트 카드
-
-    
-프로덕트리스트jsx
-
-    
-카테고리, 필터로 women, Men등 분류해주자
-
-    
 ## day2_2, day2_3취합 오류해결
 
 
@@ -235,5 +169,4 @@ export default function ProductCard({ product = {} }) {
 
     
 → 혹시라도 null이 들어오는 경우에도
-undefined 대신 안전하게 {}로 처리.    
-
+undefined 대신 안전하게 {}로 처리. 
