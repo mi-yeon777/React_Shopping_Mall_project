@@ -143,6 +143,7 @@ ProductCard.jsx
     isBest = false,
     isSoldout = false,
   } = product;
+  
 ```
 
     
@@ -162,6 +163,7 @@ ProductCard.jsx 수정전
 
     
 ```
+
 export default function ProductCard({ product = {} }) {
   const {
     id,
@@ -175,10 +177,12 @@ export default function ProductCard({ product = {} }) {
     isSoldout = false,
   } = product || {};
 }
+
 ```
 
 수정후
 ```
+
 export default function ProductCard({ product = {} }) {
   const {
     id,
@@ -192,6 +196,7 @@ export default function ProductCard({ product = {} }) {
     isSoldout = false,
   } = product || {};
 }
+
 ```
 * product = {}
 → 만약 상위 컴포넌트에서 product를 전달하지 않아도
