@@ -79,6 +79,13 @@ vite.config.js파일에 강사님 코드 복붙
 
 ## day2(지도 오류 해결완료)
 
+index.index에
+<script>태그는 일시적으로 넣어준것인데
+없어도 정상 출력이 잘되야 정상이다.
+
+    
+컴포넌트 파일의 kakaoMap.jsx 수정
+
 ## day2_2, day2_3취합 오류해결
 
 * day2_2:
