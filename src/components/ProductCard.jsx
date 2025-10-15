@@ -1,3 +1,9 @@
+/* 이 컴포넌트는:
+ProductList로부터 전달받은 product 객체를 props로 받아서
+각 상품의 카드 UI(이미지, 이름, 가격, 리뷰, 상태 등)를 출력.
+
+부모가 상품 데이터를 주고, 자식이 그 데이터를 시각적으로 표현하는 역할
+*/
 import StarRating from "@/components/StarRating";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";

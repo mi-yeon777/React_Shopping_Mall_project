@@ -13,9 +13,12 @@ function Option({ children, active }) {
     </div>
   );
 }
-
+// 부모컴포넌트(자식 컴포넌트는 productCard. 리턴부확인 <ProductCard key={p.id} product={p} />)
+//상품 리스트 전체
 export default function ProductList() {
-  const { category: nowCategory } = useParams(); //3. 카테고리 추
+  const { category: nowCategory } = useParams(); //3. 카테고리 추가
+  //카테고리(nowCategory)에 따라 상품을 필터링(filteredProducts)함
+  //그다음 각 상품마다 ProductCard 컴포넌트를 렌더링
   const products = [
     {
       id: 1,
