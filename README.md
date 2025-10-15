@@ -1,6 +1,6 @@
 # day3
 
-*Step 1.
+* Step 1.
 
 
 ProductDetail.jsx
@@ -10,7 +10,7 @@ ProductDetail.jsx
 ㄴ코드 수정추가 신발 사이즈 선택
 
 
-*Step 2.
+* Step 2.
 
 
 src에 test폴더: TestLIst.jsx, ProductsData.js 작업
