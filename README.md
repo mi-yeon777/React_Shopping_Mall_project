@@ -11,3 +11,21 @@ Check the render method of `ProductList`. See https://react.dev/link/warning-key
 
 ProductList컴포넌트: 
 React에서 리스트를 렌더링할 때 각 자식 요소에 고유한 key 속성이 필요
+
+
+key 추가, 수정 에러 해결
+```
+  return (
+    <div>
+      <h2>{category ? `${category} 카테고리` : "전체 상품"}</h2>
+      <ul>
+        {filtered.map((p) => (
+          <li key={p.id}>
+            <Link to={`/products/detail/${p.id}`}>{p.title}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+```
