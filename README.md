@@ -13,7 +13,7 @@ ProductList컴포넌트:
 React에서 리스트를 렌더링할 때 각 자식 요소에 고유한 key 속성이 필요
 
 
-key 추가, 수정 에러 해결
+* key 추가, 수정 에러 해결
 ```
   return (
     <div>
