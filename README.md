@@ -15,6 +15,17 @@ React에서 리스트를 렌더링할 때 각 자식 요소에 고유한 key 속
 
 * key 추가, 수정 에러 해결
 ```
+   return (
+     <div>
+       {products.map((p, idx) => (
+         <Link to={`/products/detail/${idx + 1}`}>
+           <div>{p.title}</div>
+         </Link>
+       ))}
+     </div>
+   );
+```
+```
   return (
     <div>
       <h2>{category ? `${category} 카테고리` : "전체 상품"}</h2>
