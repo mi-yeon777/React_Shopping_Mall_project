@@ -29,6 +29,7 @@ index.css (pnpm dlx shadcn@latest init 인스톨시 생성됨)
 
 
 
+
 App.jsx에서 path경로만 남기고 
 
 
