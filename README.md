@@ -45,3 +45,5 @@ React에서 리스트를 렌더링할 때 각 자식 요소에 고유한 key 속
   );
 }
 ```
+
+[key 오류해결 프로젝트] (https://github.com/mi-yeon777/React_Shopping_Mall_project/tree/Mall_day4_ShellScript_key%EC%98%A4%EB%A5%98%ED%95%B4%EA%B2%B0)
