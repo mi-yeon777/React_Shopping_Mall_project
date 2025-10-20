@@ -1,4 +1,6 @@
-export const products = [
+//export const products 에서 const rawProducts 로, &맵함수 추가
+
+const rawProducts = [
   {
     title: "고워크 아치핏 아웃도어",
     priceText: "139,000 109,000 22%",
@@ -6,11 +8,12 @@ export const products = [
     priceArr: ["139,000", "109,000", "22%"],
     badges: ["NEW온라인", "전용"],
     sizes: [225, 230, 235, 240, 245, 250],
+    disabledSizes: [230],
     category: "women",
     priceBefore: 139000,
     saleRate: 22,
     isNew: true,
-    isBest: true, //베스트 필터용으로 true로 바꿔봄
+    isBest: true,
   },
   {
     title: "고워크 아치핏 아웃도어",
@@ -34,8 +37,21 @@ export const products = [
     sizes: [225, 230, 235, 240, 245, 250, 255, 260],
     category: "women",
     priceBefore: 129000,
-    isNew: true,
-    isBest: false,
+    isNew: false,
+    isBest: true,
+  },
+  {
+    title: "고워크 아치핏 엔조이 (슬립인스)",
+    priceText: "129,000 109,000 16%",
+    price: 109000,
+    priceArr: ["129,000", "109,000", "16%"],
+    badges: ["NEW온라인", "전용"],
+    sizes: [225, 230, 235, 240, 245, 250],
+    category: "women",
+    priceBefore: 129000,
+    saleRate: 16,
+    isNew: false,
+    isBest: true,
   },
   {
     title: "고워크 아치핏 엔조이 (슬립인스)",
@@ -48,7 +64,7 @@ export const products = [
     priceBefore: 129000,
     saleRate: 16,
     isNew: true,
-    isBest: false,
+    isBest: true,
   },
   {
     title: "고워크 아치핏 엔조이 (슬립인스)",
@@ -61,20 +77,7 @@ export const products = [
     priceBefore: 129000,
     saleRate: 16,
     isNew: true,
-    isBest: false,
-  },
-  {
-    title: "고워크 아치핏 엔조이 (슬립인스)",
-    priceText: "129,000 109,000 16%",
-    price: 109000,
-    priceArr: ["129,000", "109,000", "16%"],
-    badges: ["NEW온라인", "전용"],
-    sizes: [225, 230, 235, 240, 245, 250],
-    category: "women",
-    priceBefore: 129000,
-    saleRate: 16,
-    isNew: true,
-    isBest: false,
+    isBest: true,
   },
   {
     title: "고워크 스태빌리티 2.0 (슬립인스)",
@@ -853,3 +856,5 @@ export const products = [
     isBest: false,
   },
 ];
+
+export const products = rawProducts.map((p, idx) => ({ id: idx + 1, ...p }));

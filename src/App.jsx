@@ -12,7 +12,7 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: "products", element: <ProductList /> },
       { path: "products/:category", element: <ProductList /> },
-      { path: "products/detail/:id", element: <ProductDetail /> },
+      { path: "products/detail/:id", element: <ProductDetail /> }, //여기서 :id정의됨
     ],
   },
 ]);

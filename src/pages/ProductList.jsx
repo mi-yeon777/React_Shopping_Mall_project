@@ -18,11 +18,19 @@ export default function ProductList() {
 
   return (
     <>
-      <h1 className="text-2xl font-bold">ProductList {nowCategory}</h1>
+      {/* <h1 className="text-2xl font-bold">ProductList {nowCategory}</h1>
       <div className="grid grid-cols-4 gap-4 my-8">
         {filteredProducts.map((p, idx) => (
-          <ProductCard key={`product-${idx}`} idx={idx} product={p} />
+          <ProductCard key={`product-${idx}`} idx={idx} product={p} /> */}
+      <h1 className="text-2xl font-bold">
+        ProductList {nowCategory?.toUpperCase()}
+      </h1>
+      <div className="grid grid-cols-4 gap-4 my-8">
+        {filteredProducts.map((p) => (
+          <ProductCard key={p.id} product={p} />
         ))}
+        {filteredProducts?.length === 0 && <div>상품 없음</div>}
+        {/* 2. 추가 */}
       </div>
     </>
   );
