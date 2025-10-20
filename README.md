@@ -33,7 +33,7 @@ App. jsx라우터에서
 ProductsData.js(데이터담긴)의 속성에 맞게 선언된 변수들을 적절히 배치해줌
 
 
-*ProductList.jsx
+* ProductList.jsx
 
 
 map에서 임시로 넣은 인덱스를 빼고 
